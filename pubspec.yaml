@@ -14,7 +14,7 @@ dependencies:
 
   # --- State Management & Routing ---
   get: ^4.6.6
-  # go_router: ^13.2.0  # Hapus atau nonaktifkan ini jika Anda memakai routing bawaan GetX
+  go_router: ^13.2.0
 
   # --- Networking & API ---
   dio: ^5.4.1
@@ -25,6 +25,9 @@ dependencies:
   # --- Media & Image Handling ---
   image_picker: ^1.0.4
   cached_network_image: ^3.3.0
+
+  # --- Environment Variables ---
+  flutter_dotenv: ^5.1.0
 
 dev_dependencies:
   flutter_test:
@@ -37,3 +40,4 @@ flutter:
   # --- Assets Configuration ---
   assets:
     - assets/image/
+    - .env
