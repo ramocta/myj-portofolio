@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:my_portofolio/core/shared/app_assets.dart';
 import 'package:go_router/go_router.dart';
 import '../controller/auth_controller.dart';
 import '../widget/custom_textfield.dart';
@@ -25,34 +26,17 @@ class RegisterView extends StatelessWidget {
       ),
       body: SafeArea(
         child: SingleChildScrollView(
-          padding: const EdgeInsets.symmetric(horizontal: 24.0, vertical: 16.0),
+          padding: const EdgeInsets.symmetric(horizontal: 24.0, vertical: 10.0),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              // Header
-              Container(
-                padding: const EdgeInsets.all(12),
-                decoration: BoxDecoration(
-                  color: const Color(0xFF1E1E1E),
-                  borderRadius: BorderRadius.circular(16),
-                ),
-                child: const Icon(Icons.school, color: Colors.white, size: 30),
-              ),
-              const SizedBox(height: 16),
-              const Text(
-                'Myj Portofolio',
-                style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 22,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
-              const SizedBox(height: 8),
+              Image.asset(AppAssets.logo, width: 200, height: 200),
+              const SizedBox(height: 20),
               const Text(
                 'Buat akun untuk memulai',
                 style: TextStyle(color: Colors.white54, fontSize: 14),
               ),
-              const SizedBox(height: 32),
+              const SizedBox(height: 16),
 
               // Form Input
               CustomTextField(

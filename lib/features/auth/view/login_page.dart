@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:my_portofolio/core/shared/app_assets.dart';
 import 'package:go_router/go_router.dart';
 import '../controller/auth_controller.dart';
 import '../widget/custom_textfield.dart';
@@ -20,30 +21,13 @@ class LoginView extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              // Ikon / Logo
-              Container(
-                padding: const EdgeInsets.all(16),
-                decoration: BoxDecoration(
-                  color: const Color(0xFF1E1E1E),
-                  borderRadius: BorderRadius.circular(16),
-                ),
-                child: const Icon(Icons.school, color: Colors.white, size: 40),
-              ),
-              const SizedBox(height: 24),
-              const Text(
-                'Myj Portofolio',
-                style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 24,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
-              const SizedBox(height: 8),
+              Image.asset(AppAssets.logo, width: 200, height: 200),
+              const SizedBox(height: 20),
               const Text(
                 'Masuk untuk melanjutkan',
                 style: TextStyle(color: Colors.white54, fontSize: 14),
               ),
-              const SizedBox(height: 40),
+              const SizedBox(height: 16),
 
               // Form Input
               CustomTextField(
@@ -70,7 +54,7 @@ class LoginView extends StatelessWidget {
 
                     // Jika sukses dan context masih aktif, pindah halaman
                     if (isSuccess && context.mounted) {
-                      // context.go('/home'); // Buka komentar ini nanti
+                      context.go('/main'); // Buka komentar ini nanti
                     }
                   },
                 ),
